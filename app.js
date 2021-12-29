@@ -12,8 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => res.send("API running"));
 app.use("/api/users", usersRoute);
-app.use("/api/comparisons", authRoute);
-app.use("/api/auth", comparisonsRoute);
+app.use("/api/comparisons", comparisonsRoute);
+app.use("/api/auth", authRoute);
 
 const PORT = process.env.PORT || 5000;
 
