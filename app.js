@@ -7,6 +7,9 @@ const comparisonsRoute = require("./routes/api/comparisons");
 const app = express();
 connectDB();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.get("/", (req, res) => res.send("API running"));
 app.use("/api/users", usersRoute);
 app.use("/api/comparisons", authRoute);
