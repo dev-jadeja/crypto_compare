@@ -3,6 +3,7 @@ import * as actionTypes from "../actions/actionTypes";
 const initialState = {
 	currencies: [],
 	loading: false,
+	comparisons: [],
 };
 
 const setStart = (state, payload) => {
@@ -25,6 +26,15 @@ const createComparisonFail = (state, payload) => {
 		...state,
 		currencies: [],
 		loading: false,
+		comparisons: [],
+	};
+};
+
+const fetchComparisonsSuccess = (state, payload) => {
+	return {
+		...state,
+		loading: false,
+		comparisons: payload,
 	};
 };
 
@@ -37,7 +47,10 @@ const reducer = (state = initialState, action) => {
 		case actionTypes.CREATE_COMPARISON_SUCCESS:
 			return createComparisonSuccess(state, payload);
 		case actionTypes.CREATE_COMPARISON_FAIL:
+		case actionTypes.GET_COMPARISONS_FAIL:
 			return createComparisonFail(state, payload);
+		case actionTypes.GET_COMPARISONS_SUCCESS:
+			return fetchComparisonsSuccess(state, payload);
 		default:
 			return state;
 	}
