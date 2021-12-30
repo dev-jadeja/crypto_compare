@@ -63,7 +63,7 @@ const Signup = (props) => {
 							/>
 						</Form.Group>
 
-						<Form.Group controlId="formBasicEmail">
+						<Form.Group controlId="formBasicEmail" className="mt-2">
 							<Form.Label>Email address</Form.Label>
 							<Form.Control
 								type="email"
@@ -74,7 +74,7 @@ const Signup = (props) => {
 							/>
 						</Form.Group>
 
-						<Form.Group controlId="formBasicPassword">
+						<Form.Group controlId="formBasicPassword" className="mt-2">
 							<Form.Label>Password</Form.Label>
 							<Form.Control
 								type="password"
@@ -85,7 +85,7 @@ const Signup = (props) => {
 							/>
 						</Form.Group>
 
-						<Form.Group controlId="formBasicPassword2">
+						<Form.Group controlId="formBasicPassword2" className="mt-2">
 							<Form.Label>Confirm Password</Form.Label>
 							<Form.Control
 								type="password"
@@ -96,7 +96,7 @@ const Signup = (props) => {
 							/>
 						</Form.Group>
 
-						<Button variant="primary" type="submit">
+						<Button variant="primary" type="submit" className="mt-3">
 							Submit
 						</Button>
 					</Form>

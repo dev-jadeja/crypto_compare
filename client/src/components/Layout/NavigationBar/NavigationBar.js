@@ -11,28 +11,20 @@ const NavigationBar = (props) => {
 		<Fragment>
 			<Nav>
 				<NavLink
-					to="/new"
-					className={classes.Link}
-					activeClassName={classes.active}
-				>
-					<i className="fas fa-plus-square"></i>
-					&nbsp; NEW POLL
-				</NavLink>
-				<NavLink
-					to="/polls"
+					to="/compare"
 					className={classes.Link}
 					activeClassName={classes.active}
 				>
 					<i className="fas fa-chart-pie"></i>
-					&nbsp; MY POLLS
+					&nbsp; COMPARE
 				</NavLink>
 				<NavLink
-					to="/vote"
+					to="/history"
 					className={classes.Link}
 					activeClassName={classes.active}
 				>
-					<i className="fas fa-paper-plane"></i>
-					&nbsp; VOTE
+					<i className="fas fa-history"></i>
+					&nbsp; HISTORY
 				</NavLink>
 			</Nav>
 			<Nav className="ml-auto mr-5">
@@ -68,7 +60,7 @@ const NavigationBar = (props) => {
 	);
 
 	return (
-		<Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+		<Navbar collapseOnSelect expand="md" bg="primary" variant="light">
 			<Navbar.Brand className="ml-md-5">
 				<NavLink
 					style={{
@@ -80,7 +72,7 @@ const NavigationBar = (props) => {
 					activeClassName={classes.active}
 					exact
 				>
-					VOTICA
+					CRYPTO COMPARE
 				</NavLink>
 			</Navbar.Brand>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -10,6 +10,9 @@ import { connect } from "react-redux";
 import setAuthToken from "./utils/setAuthToken";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import NotFound from "./components/NotFound/NotFound";
+import Compare from "./components/Compare/Compare";
+import History from "./components/History/History";
+import Charts from "./components/Charts/Charts";
 
 if (localStorage.token) {
 	setAuthToken(localStorage.token);
@@ -28,6 +31,9 @@ const App = (props) => {
 				<Route path="/" exact component={Landing} />
 				<Route path="/login" exact component={Login} />
 				<Route path="/signup" exact component={Signup} />
+				<PrivateRoute path="/compare" exact component={Compare} />
+				<PrivateRoute path="/history" exact component={History} />
+				<PrivateRoute path="/chart" exact component={Charts} />
 				<Route component={NotFound} />
 			</Switch>
 		</Fragment>

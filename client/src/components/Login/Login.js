@@ -29,8 +29,8 @@ const Login = (props) => {
 		return <Redirect to="/" />;
 	}
 
-	if(props.loading) {
-		return <Spinner />
+	if (props.loading) {
+		return <Spinner />;
 	}
 
 	return (
@@ -57,7 +57,7 @@ const Login = (props) => {
 							/>
 						</Form.Group>
 
-						<Form.Group controlId="formBasicPassword">
+						<Form.Group controlId="formBasicPassword" className="mt-2">
 							<Form.Label>Password</Form.Label>
 							<Form.Control
 								type="password"
@@ -67,7 +67,7 @@ const Login = (props) => {
 								onChange={(e) => onChange(e)}
 							/>
 						</Form.Group>
-						<Button variant="primary" type="submit">
+						<Button variant="primary" type="submit" className="mt-3">
 							Submit
 						</Button>
 					</Form>

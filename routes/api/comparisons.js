@@ -33,7 +33,7 @@ route.post(
 				min: 2,
 			}),
 			check("currencies.*")
-				.isIn(["BTC", "ETH"])
+				.isIn(["BTC", "ETH", "MATIC", "DOGE", "DASH"])
 				.withMessage("Currencies are not valid"),
 		],
 	],
@@ -51,7 +51,6 @@ route.post(
 			const comparison = await newComparison.save();
 
 			res.json(comparison);
-			// res.json({ msg: "Comparison added to database" });
 		} catch (err) {
 			console.error(err.message);
 			res.status(500).json({ errors: [{ msg: "Server Error" }] });
