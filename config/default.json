@@ -1,4 +1,0 @@
-{
-	"mongoURI": "mongodb+srv://dev123:dev123@cryptocompare.kgd74.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-	"jwtSecret": "dogecoinstonks"
-}
